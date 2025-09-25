@@ -6,7 +6,7 @@ export default function ContactList({ setEditContact }) {
     const [search, setsearch] = useState('')
 
      const filterData = contacts.filter((contact) => (
-        contact.name.toLowerCase().includes(search)
+        contact.name.toLowerCase().includes(search.trim().toLowerCase())
      ))
 
   return (
