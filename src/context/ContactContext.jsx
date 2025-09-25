@@ -13,7 +13,7 @@ const ContactContext = createContext({
 export const ContactProvider = ({ children }) => {
 const [contacts, setContacts] = useState(() => {
     const saved = localStorage.getItem("contacts");
-    return saved ? JSON.parse(saved) : [{ id: 1, name: "Yogi", email: "yogi@example.com" }];
+    return saved ? JSON.parse(saved) : [];
   });
 
   const addContact = (newContact) =>
